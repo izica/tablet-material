@@ -1,20 +1,23 @@
-.info{
+.info {
     padding: 48px 33px;
-    &__label{
-        color: #858487;
+
+    &__label {
         font-size: 20px;
-        margin-bottom: 10px;
         line-height: 25px;
+        margin-bottom: 10px;
+        color: #858487;
     }
-    &__text{
+
+    &__text {
+        font-size: 23px;
         font-weight: 700;
         color: #000;
-        font-size: 23px;
     }
-    &__line{
-        height: 2px;
-        background: #899dbe;
+
+    &__line {
         width: 67%;
+        height: 2px;
         margin: 11px 0;
+        background: #899dbe;
     }
 }

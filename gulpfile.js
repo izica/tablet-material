@@ -27,7 +27,7 @@ var path = {
     },
     watch: {
         css: './src/scss/**/*.scss',
-        js:  './src/js/*.js',
+        js:  './src/js/**/*.js',
     }
 };
 
