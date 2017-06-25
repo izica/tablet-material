@@ -19,7 +19,7 @@ var path = {
     	images: './src/i/**/*',
         css:    './src/scss/global.scss',
         js: [
-        	'./src/js/libs/*.js',
+        	'./src/js/lib/*.js',
         	'./src/js/module/*.js',
         	'./src/js/page/*.js',
         	'./src/js/*.js'
