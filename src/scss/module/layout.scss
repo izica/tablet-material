@@ -14,9 +14,9 @@ $content_right: 35px;
     justify-content: flex-end;
     align-items: center;
 
-    &-settings {
+    &-button {
         font-size: 30px;
-        padding: 10px;
+        padding: 8px;
         cursor: pointer;
         transition: 0.4s;
         color: #fff;
@@ -65,6 +65,42 @@ $content_right: 35px;
                     background: #9bc200;
                 }
             }
+        }
+    }
+}
+
+.header-settings {
+    position: fixed;
+    z-index: -1;
+    top: 73px;
+    right: $content_right;
+    visibility: hidden;
+    width: 330px;
+    padding: 15px 0;
+    transition: 0.3s;
+    opacity: 0;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 1px 16px 1px rgba(0,0,0,.46);
+
+    &--visible {
+        z-index: 10;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__item {
+        font-size: 20px;
+        display: block;
+        width: 100%;
+        padding: 15px 25px;
+        cursor: pointer;
+        transition: 0.4s;
+        color: #000;
+        background: #fff;
+
+        &:hover {
+            background: #eee;
         }
     }
 }
