@@ -7,7 +7,8 @@ jQuery(document).ready(function($) {
     }
 
     var table_head_absolute = $("<div></div>").addClass('table-head').addClass('table-head--absolute').append($('.table-head').html());
-    $(".table-wrap").prepend(table_head_absolute);
+    var table = $("<div></div>").addClass('table').prepend(table_head_absolute);
+    $(".table-wrap").prepend(table);
 
     $(".table-body__cell--slider").each(function(index, el) {
         var slider = $(this).append('<div><div>').find('div')[0];

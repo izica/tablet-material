@@ -160,6 +160,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: 0.3s;
+    padding: 10px;
     opacity: 1;
 }
 .noUi-handle:before {
@@ -172,7 +173,8 @@
     -moz-osx-font-smoothing: grayscale;
     transition: 0.3s;
     opacity: 1;
-    margin-right: -7px;
+    padding: 10px;
+    margin-right: -28px;
 }
 /* Disabled state;
  */
