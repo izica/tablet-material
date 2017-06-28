@@ -1,7 +1,7 @@
 .chart{
     height: 100%;
     &-head{
-        height: 92px;
+        height: 98px;
         width: 100%;
         background: #fafafa;
         box-shadow: 0 1px 6px -1px rgba(0,0,0,.36);
@@ -11,7 +11,7 @@
             justify-content: space-between;
             align-items: flex-start;
             vertical-align: top;
-            padding: 20px 23px;
+            padding: 20px;
             font-size: 20px;
             position: relative;
             span{
@@ -29,12 +29,12 @@
                 width: 0;
                 height: 43px;
                 border-right: 2px solid #dbdbdb;
-                top: 23px;
+                top: 20px;
             }
             &:first-child{
-                width: 310px;
-                min-width: 310px;
-                max-width: 310px;
+                width: 315px;
+                min-width: 315px;
+                max-width: 315px;
             }
             &:last-child{
                 width: 1195px;
@@ -47,7 +47,7 @@
     &-legend{
         display: flex;
         justify-content: flex-end;
-        margin-top: 15px;
+        margin-top: 17px;
         &__item{
             position: relative;
             display: flex;
@@ -95,9 +95,9 @@
             line-height: 33px;
             position: relative;
             &:first-child{
-                width: 310px;
-                min-width: 310px;
-                max-width: 310px;
+                width: 315px;
+                min-width: 315px;
+                max-width: 315px;
             }
             &:last-child{
                 width: 1195px;
