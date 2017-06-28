@@ -10,8 +10,8 @@
     <body>
         <div class="header">
             <div class="header-tabs">
-                <div class="header-tabs__item header-tabs__item--active">Таблица</div>
-                <div class="header-tabs__item">График</div>
+                <div class="header-tabs__item header-tabs__item--active" code="table">Таблица</div>
+                <div class="header-tabs__item" code="chart">График</div>
             </div>
             <div class="header-button">
                 <i class="mdi mdi-settings"></i>
@@ -46,37 +46,331 @@
             </div>
             <div class="logo"></div>
         </div>
-        <div class="content">
-            <div class="table-wrap">
-                <div class="table-scroll">
-                    <div class="table">
-                        <div class="table-head table-head--hidden">
-                            <div class="table-head__cell" width="315px"><span>Препарат</span></div>
-                            <div class="table-head__cell" width="135px"><span>Все в бонусе</span></div>
-                            <div class="table-head__cell" width="175px"><span>План продаж</span></div>
-                            <div class="table-head__cell" width="175px"><span>Факт продаж</span></div>
-                            <div class="table-head__cell" width="165px"><span>Выполнение плана %</span></div>
-                            <div class="table-head__cell" width="145px"><span>Расчетный бонус</span></div>
-                            <div class="table-head__cell" width="430px"><span>Прогноз бонуса</span></div>
-                        </div>
-                        <div class="table-body">
-                            <div class="table-body__row">
-                                <div class="table-body__cell">ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</div>
-                                <div class="table-body__cell">50%</div>
-                                <div class="table-body__cell">
-                                    <div class="table-body__field">
+        <div class="content content--table content--active">
+            <div class="table table--main">
+                <div class="table-head">
+                    <table>
+                        <colgroup>
+                            <col width="315"></col>
+                            <col width="135"></col>
+                            <col width="175"></col>
+                            <col width="175"></col>
+                            <col width="165"></col>
+                            <col width="145"></col>
+                            <col width="100%"></col>
+                        </colgroup>
+                        <tbody>
+                            <td><span>Препарат</span></td>
+                            <td><span>Все в бонусе</span></td>
+                            <td><span>План продаж</span></td>
+                            <td><span>Факт продаж</span></td>
+                            <td><span>Выполнение плана %</span></td>
+                            <td><span>Расчетный бонус</span></td>
+                            <td><span>Прогноз бонуса</span></td>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-body">
+                    <table>
+                        <colgroup>
+                            <col width="315"></col>
+                            <col width="135"></col>
+                            <col width="175"></col>
+                            <col width="175"></col>
+                            <col width="165"></col>
+                            <col width="145"></col>
+                            <col width="100%"></col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
                                         <input type="text" name="" value="1 000 000">
                                     </div>
-                                </div>
-                                <div class="table-body__cell">
-                                    <div class="table-body__field">
+                                </td>
+                                <td>
+                                    <div class="table-field">
                                         <input type="text" name="" value="1 000 000">
                                     </div>
-                                </div>
-                                <div class="table-body__cell">50%</div>
-                                <div class="table-body__cell table-body__cell--bonus">70 000 Р</div>
-                                <div class="table-body__cell table-body__cell--slider"></div>
-                            </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>ФОРМУЛА ЗДОРОВЬЯ КАЛИНИНГРАД</td>
+                                <td>50%</div>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-field">
+                                        <input type="text" name="" value="1 000 000">
+                                    </div>
+                                </td>
+                                <td>50%</td>
+                                <td class="table-bonus">70 000 Р</td>
+                                <td class="table-slider"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="content content--chart">
+            <div class="chart">
+                <div class="chart-head">
+                    <div class="chart-head-column">
+                        <span>Препарат</span>
+                    </div>
+                    <div class="chart-head-column">
+                        <span>Показатели</span>
+                        <div class="chart-legend">
+                            <div class="chart-legend__item" color="#00bcd2">Расчетный бонус</div>
+                            <div class="chart-legend__item" color="#bfdde6">Базовый бонус</div>
+                            <div class="chart-legend__item" color="#e9bb92">Бонус +</div>
                         </div>
                     </div>
                 </div>

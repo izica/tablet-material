@@ -4,9 +4,11 @@ var gulp         = require('gulp'),
     concat       = require('gulp-concat'),
     csso         = require('gulp-csso'),
     uglify       = require('gulp-uglify'),
+    babel        = require('gulp-babel'),
     tiny         = require('gulp-tinypng-nokey'),
     connect      = require('gulp-connect'),
     plumber      = require('gulp-plumber')
+    sourcemaps   = require('gulp-sourcemaps');
     autoprefixer = require('gulp-autoprefixer');
 
 var path = {
@@ -42,12 +44,14 @@ gulp.task('connect', function() {
 //sass
 gulp.task('css', function() {
     gulp.src([path.src.css])
+        .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(concat('styles.min.css'))
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(csso())
         .pipe(plumber.stop())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(connect.reload());
 });
@@ -55,10 +59,15 @@ gulp.task('css', function() {
 //js
 gulp.task('js', function() {
     gulp.src(path.src.js)
+        .pipe(sourcemaps.init())
         .pipe(plumber())
+        .pipe(babel({
+            presets: ['es2015', 'stage-1']
+        }))
         .pipe(concat('bundle.min.js'))
         .pipe(uglify())
         .pipe(plumber.stop())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
         .pipe(connect.reload());
 });

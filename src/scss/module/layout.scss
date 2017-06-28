@@ -120,4 +120,8 @@ $content_right: 35px;
     left: $sidebar_width;
     background: #fff;
     box-shadow: 0 8px 10px 3px rgba(0, 0, 0, .26);
+    display: none;
+    &--active{
+        display: block;
+    }
 }
