@@ -28,8 +28,7 @@ jQuery(document).ready(function($) {
         }
         var data = [];
         for (var i = 0; i < 20; i++) {
-            data.push(jQuery.extend(true, {}, row));
-            console.log(row);
+            data.push($.extend(true, {}, row));
             row.chart.plus.progress = row.chart.plus.progress - 1.5;
             row.chart.base.progress = row.chart.base.progress - 1;
         }
