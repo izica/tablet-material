@@ -1,7 +1,7 @@
 .chart{
     height: 100%;
     &-head{
-        height: 98px;
+        height: 62px;
         width: 100%;
         background: #fafafa;
         box-shadow: 0 1px 6px -1px rgba(0,0,0,.36);
@@ -11,35 +11,32 @@
             justify-content: space-between;
             align-items: flex-start;
             vertical-align: top;
-            padding: 20px;
-            font-size: 20px;
+            padding: 17px 16px;
+            font-size: 13px;
             position: relative;
             span{
                 display: inline-block;
                 vertical-align: top;
                 color: #5f5f5f;
-                line-height: 29px;
+                line-height: 18px;
                 width: 100%;
                 position: relative;
+                font-weight: 600;
             }
             &::after{
                 content: '';
                 position: absolute;
                 right: 0;
                 width: 0;
-                height: 43px;
+                height: 28px;
                 border-right: 2px solid #dbdbdb;
-                top: 20px;
+                top: 16px;
             }
             &:first-child{
-                width: 315px;
-                min-width: 315px;
-                max-width: 315px;
+                width: 210px;
             }
             &:last-child{
-                width: 1195px;
-                min-width: 1195px;
-                max-width: 1195px;
+                width: calc(100% - 210px);
             }
 
         }
@@ -47,21 +44,23 @@
     &-legend{
         display: flex;
         justify-content: flex-end;
-        margin-top: 17px;
+        margin-top: 8px;
+        margin-right: 19px;
         &__item{
             position: relative;
             display: flex;
             align-items: center;
-            margin-left: 65px;
+            margin-left: 40px;
             div{
-                font-size: 17px;
+                font-size: 12px;
                 white-space: nowrap;
+                font-weight: 600;
             }
             i{
                 display: block;
-                margin-right: 18px;
-                width: 22px;
-                height: 22px;
+                margin-right: 4px;
+                width: 14px;
+                height: 14px;
             }
         }
     }
@@ -69,19 +68,23 @@
         height: calc(100% - 92px);
         overflow-y: auto;
         overflow-x: hidden;
+        position: relative;
         &-lines{
             position: absolute;
-            left: 332px;
-            top: 112px;
+            left: 227px;
+            top: 9px;
             height: 100%;
-            width: 1151px;
+            width: calc(100% - 71px - 173px);
             display: flex;
             font-size: 0;
+            border: 1px solid #f5f5f7;
             div{
+                position: absolute;
+                top: 0;
                 min-height: 100%;
                 height: 100%;
-                width: 5%;
-                border: 1px solid #f5f5f7;
+                width: 0px;
+                border-right: 1px solid #f5f5f7;
             }
         }
         &-row{
@@ -90,35 +93,32 @@
         }
         &-column{
             vertical-align: top;
-            padding: 20px 23px;
-            font-size: 24px;
-            line-height: 33px;
+            padding: 9px 17px;
+            font-size: 17px;
+            line-height: 23px;
             position: relative;
+            min-height: 72px;
             &:first-child{
-                width: 315px;
-                min-width: 315px;
-                max-width: 315px;
+                width: 210px;
             }
             &:last-child{
-                width: 1195px;
-                min-width: 1195px;
-                max-width: 1195px;
+                width: calc(100% - 210px);
             }
         }
     }
     &-bonus{
         display: flex;
-        height: 50px;
+        height: 33px;
         position: relative;
         width: 100%;
         &__base{
-            height: 50px;
+            height: 100%;
             background: #c0dde5;
             position: relative;
             &::after{
                 content: attr(value);
-                bottom: -32px;
-                font-size: 15px;
+                bottom: -23px;
+                font-size: 12px;
                 font-weight: 400;
                 color: #82a1a7;
                 position: absolute;
@@ -126,7 +126,7 @@
             }
         }
         &__plus{
-            height: 50px;
+            height: 100%;
             background: #f4e1d0;
             position: relative;
             &--active{
@@ -134,8 +134,8 @@
             }
             &::after{
                 content: attr(value);
-                bottom: -32px;
-                font-size: 15px;
+                bottom: -23px;
+                font-size: 12px;
                 font-weight: 400;
                 color: #c1742e;
                 position: absolute;
@@ -146,16 +146,17 @@
             position: absolute;
             top: 0px;
             left: 0px;
-            height: 25px;
+            height: 50%;
             background: #00bbd5;
             &::after{
-                font-size: 20px;
+                font-size: 13px;
                 font-weight: 700;
                 color: #fff;
                 position: absolute;
                 top: 0;
                 right: 12px;
                 content: attr(value);
+                line-height: 21px;
             }
         }
     }

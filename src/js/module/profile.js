@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+    Profile.getCurrentUser();
+
     $(".profile__name").click(function(e) {
         e.preventDefault();
         e.stopPropagation();

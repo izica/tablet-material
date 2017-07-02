@@ -1,6 +1,6 @@
 .profile {
     position: relative;
-    padding: 68px 34px 30px;
+    padding: 46px 24px 19px;
     color: #fff;
 
     &::before {
@@ -19,10 +19,10 @@
         top: 0;
         display: flex;
         overflow: hidden;
-        width: 110px;
-        height: 110px;
+        width: 74px;
+        height: 74px;
         transform: translateY(-50%);
-        border: 10px solid #00a8d9;
+        border: 7px solid #00a8d9;
         border-radius: 50%;
         background: #00a8d9;
         box-shadow: 0 4px 11px 1px rgba(0,0,0,.4);
@@ -30,27 +30,27 @@
         justify-content: center;
 
         i {
-            font-size: 117px;
-            margin-top: 15px;
+            font-size: 83px;
+            margin-top: 14px;
         }
     }
 
     &__name {
-        font-size: 26px;
-        line-height: 36px;
+        font-size: 17px;
+        line-height: 24px;
         position: relative;
         cursor: pointer;
 
         i {
             position: absolute;
             top: 2px;
-            right: -8px;
+            right: -6px;
         }
     }
 
     &__position {
-        font-size: 17px;
-        line-height: 22px;
+        font-size: 11px;
+        line-height: 18px;
         position: relative;
         opacity: 0.4;
     }
@@ -58,22 +58,21 @@
     &__line {
         width: 100%;
         height: 1px;
-        margin: 25px 0;
+        margin: 14px 0;
         opacity: 0.5;
         background: #fff;
     }
 
     &__bonus {
-        font-size: 14px;
-        font-size: 23px;
+        font-size: 15px;
         position: relative;
-        margin-bottom: 3px;
         opacity: 0.5;
+        line-height: 24px;
     }
 
     &__amount {
-        font-size: 49px;
-        line-height: 60px;
+        font-size: 32px;
+        line-height: 39px;
         position: relative;
     }
 }
@@ -81,11 +80,11 @@
 .profile-select {
     position: fixed;
     z-index: -1;
-    top: 20px;
-    left: 20px;
+    top: 12px;
+    left: 12px;
     visibility: hidden;
     overflow: hidden;
-    width: 435px;
+    width: 289px;
     transition: 0.4s;
     opacity: 0;
     border-radius: 4px;
@@ -99,40 +98,40 @@
     }
 
     &-header {
-        height: 188px;
-        padding: 40px 25px 40px 160px;
+        height: 126px;
+        padding: 30px 23px 27px 107px;
 
         &__image {
             position: absolute;
             z-index: 7;
             top: 0;
-            top: 40px;
-            left: 25px;
+            top: 27px;
+            left: 16px;
             display: flex;
             overflow: hidden;
-            width: 110px;
-            height: 110px;
+            width: 74px;
+            height: 74px;
             color: #fff;
-            border: 10px solid #00a8d9;
+            border: 7px solid #00a8d9;
             border-radius: 50%;
             background: #00a8d9;
             align-items: center;
             justify-content: center;
 
             i {
-                font-size: 117px;
-                margin-top: 15px;
+                font-size: 83px;
+                margin-top: 14px;
             }
         }
 
         &__name {
-            font-size: 24px;
-            line-height: 35px;
+            font-size: 16px;
+            line-height: 22px;
         }
 
         &__position {
-            font-size: 19px;
-            line-height: 38px;
+            font-size: 13px;
+            line-height: 30px;
         }
     }
 
@@ -145,8 +144,8 @@
 
     &-item {
         position: relative;
-        min-height: 102px;
-        padding: 15px 20px 15px 110px;
+        min-height: 70px;
+        padding: 15px 20px 15px 74px;
         cursor: pointer;
         transition: 0.4s;
         background: #f8f8f8;
@@ -157,12 +156,12 @@
 
         &__image {
             position: absolute;
-            top: 15px;
-            left: 20px;
+            top: 10px;
+            left: 16px;
             display: flex;
             overflow: hidden;
-            width: 72px;
-            height: 72px;
+            width: 48px;
+            height: 48px;
             color: #fff;
             border: 8px solid #98c000;
             border-radius: 50%;
@@ -177,12 +176,12 @@
         }
 
         &__name {
-            font-size: 20px;
-            margin-top: 12px;
+            font-size: 13px;
+            margin-top: 5px;
         }
 
         &__position {
-            font-size: 19px;
+            font-size: 12px;
             margin-top: 1px;
             color: #7c7c7e;
         }

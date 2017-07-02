@@ -1,15 +1,15 @@
 .info {
-    padding: 48px 33px;
+    padding: 28px 24px;
 
     &__label {
-        font-size: 20px;
+        font-size: 13px;
         line-height: 25px;
-        margin-bottom: 10px;
+        margin-bottom: 3px;
         color: #858487;
     }
 
     &__text {
-        font-size: 23px;
+        font-size: 15px;
         font-weight: 700;
         color: #000;
     }
@@ -17,7 +17,7 @@
     &__line {
         width: 67%;
         height: 2px;
-        margin: 11px 0;
+        margin: 6px 0;
         background: #899dbe;
     }
 }
