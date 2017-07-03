@@ -50,4 +50,9 @@ jQuery(document).ready(function($) {
     }
 
     loadData();
+
+    $("body").on('keyup', '.table-field input', function(event) {
+        event.preventDefault();
+        this.value = this.value.replace(/[^0-9.]/g, "");
+    });
 });
