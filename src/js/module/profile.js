@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
     Profile.getCurrentUser();
+    Profile.getUsersList();
 
     $(".profile__name").click(function(e) {
         e.preventDefault();
