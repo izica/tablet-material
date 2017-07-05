@@ -129,10 +129,51 @@
     font-weight: 400;
     margin-right: 12px;
     padding: 9px 17px;
+    text-align: center;
+    width: 200px;
     cursor: pointer;
     color: #fff;
     border: 1px solid rgba(#fff, .5);
     border-radius: 3px;
+    position: relative;
+    display: none;
+    &--visible{
+        display: block;
+    }
+    &-list {
+        position: fixed;
+        padding: 0;
+        border-radius: 3px;
+        right: 157px;
+        top: 51px;
+        margin: 0;
+        background: #fff;
+        box-shadow: 0 4px 18px -1px rgba(0,0,0,.36);
+        visibility: hidden;
+        z-index: -1;
+        transition: 0.4s;
+        opacity: 0;
+        width: 200px;
+        &--visible{
+            z-index: 10;
+            visibility: visible;
+            opacity: 1;
+        }
+        &__item {
+            margin: 0;
+            width: 100%;
+            padding: 10px 17px;
+            font-size: 13px;
+            display: block;
+            transition: 0.3s;
+            width: 100%;
+            cursor: pointer;
+
+            &:hover {
+                background: #eee;
+            }
+        }
+    }
 }
 
 .header-save {

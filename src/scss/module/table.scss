@@ -1,6 +1,15 @@
 .table {
     position: relative;
     height: 100%;
+    display: none;
+
+    &--main{
+        display: block;
+    }
+    
+    &--active{
+        display: block;
+    }
 
     table {
         table-layout: fixed;
@@ -64,6 +73,15 @@
             td{
                 padding: 0px 15px;
             }
+            .table-field{
+                input{
+                    padding: 16px 20px 14px 0;
+                    font-size: 18px;
+                }
+                &::after{
+                    display: none;
+                }
+            }
         }
     }
 
@@ -86,7 +104,7 @@
             border-bottom: 2px solid #e1e1e1;
             transition: 0.4s;
             padding: 3px 20px 3px 0;
-            text-align: right;
+            text-align: left;
             outline: none;
             width: 100%;
 
@@ -119,7 +137,7 @@
             outline: none;
             width: 100%;
             font-size: 18px;
-            padding: 13px 20px 12px 0;
+            padding: 16px 20px 12px 0;
         }
 
         i {
@@ -142,6 +160,9 @@
             transition: 0.4s;
             opacity: 0;
 
+        }
+        &--visible span{
+            border-bottom: 2px solid #00a4cd;
         }
         &--visible &__list{
             z-index: 10;
