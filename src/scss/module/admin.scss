@@ -1,0 +1,31 @@
+.admin-menu{
+    padding-top: 20px;
+    &__item{
+        display: flex;
+        align-items: center;
+        width: calc(100% - 18px);
+        position: relative;
+        font-size: 13px;
+        font-weight: 700;
+        color: #636363;
+        transition: 0.3s;
+        padding: 8px 0px 8px 21px;
+        cursor: pointer;
+        &:hover{
+            background: #eeeeee;
+        }
+        &--active{
+            background: #eeeeee;
+            i{
+                color: #00a8d9;
+            }
+        }
+        i{
+            margin-right: 20px;
+            font-size: 24px;
+        }
+        span{
+
+        }
+    }
+}

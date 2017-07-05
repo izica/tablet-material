@@ -65,10 +65,13 @@
         }
     }
     &-body{
-        height: calc(100% - 92px);
-        overflow-y: auto;
-        overflow-x: hidden;
         position: relative;
+        &-scroll{
+            height: calc(100% - 62px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+        }
         &-lines{
             position: absolute;
             left: 227px;

@@ -53,12 +53,17 @@
         height: calc(100% - 62px);
         overflow-y: auto;
         overflow-x: hidden;
-
         td {
             padding: 15px;
             font-size: 16px;
             line-height: 22px;
             vertical-align: top;
+        }
+
+        &--select{
+            td{
+                padding: 0px 15px;
+            }
         }
     }
 
@@ -110,14 +115,16 @@
             cursor: pointer;
             border-bottom: 2px solid #e1e1e1;
             transition: 0.4s;
-            padding: 3px 20px 3px 0;
-            text-align: right;
+            text-align: left;
             outline: none;
             width: 100%;
+            font-size: 18px;
+            padding: 13px 20px 12px 0;
         }
 
         i {
             display: inline-block;
+            width: 14px;
         }
 
         &__list {
