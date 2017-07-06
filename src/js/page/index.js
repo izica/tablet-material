@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
             plan: 1000,
             fact: 1500,
             progress: '50%',
-            bonus: '7 000 P',
+            bonus: '7 000 ₽',
             prediction: {
                 value: 130,
                 max: 200
