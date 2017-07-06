@@ -20,6 +20,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         event.stopPropagation();
         $(this).parents(".table-select").find('span').text($(this).text());
+        $(this).parents(".table-select").removeClass('table-select--empty');
         $('.table-select').removeClass(visible);
     });
 

@@ -23,19 +23,28 @@
             </div>
             <div class="header-save">Сохранить</div>
         </div>
+        <!-- <div class="popup popup--save">
+            <div class="popup__overlay"></div>
+            <div class="popup__body">
+                <div class="popup__footer">
+                    <div class="popup__btn">Отмена</div>
+                    <div class="popup__btn">Ок</div>
+                </div>
+            </div>
+        </div> -->
         <ul class="header-select-list header-select-list--dictionary">
-            <li class="header-select-list__item" type="dictionary_position">Должность</li>
-            <li class="header-select-list__item" type="dictionary_bonus_position">Бонусная Должность</li>
-            <li class="header-select-list__item" type="dictionary_brand">Бренд</li>
-            <li class="header-select-list__item" type="dictionary_bu">БЮ</li>
-            <li class="header-select-list__item" type="dictionary_pharmacy">Аптечная сеть</li>
-            <li class="header-select-list__item" type="dictionary_other">Прочие элементы зоны ответственности</li>
+            <li class="header-select-list__item" dictionary="dictionary_position">Должность</li>
+            <li class="header-select-list__item" dictionary="dictionary_bonus_position">Бонусная Должность</li>
+            <li class="header-select-list__item" dictionary="dictionary_brand">Бренд</li>
+            <li class="header-select-list__item" dictionary="dictionary_bu">БЮ</li>
+            <li class="header-select-list__item" dictionary="dictionary_pharmacy">Аптечная сеть</li>
+            <li class="header-select-list__item" dictionary="dictionary_other">Прочие элементы зоны ответственности</li>
         </ul>
         <ul class="header-select-list header-select-list--weight">
-            <li class="header-select-list__item" type="weight_brand">Бренд</li>
-            <li class="header-select-list__item" type="weight_bu">БЮ</li>
-            <li class="header-select-list__item" type="weight_pharmacy">Аптечная сеть</li>
-            <li class="header-select-list__item" type="weight_other">Прочие элементы зоны ответственности</li>
+            <li class="header-select-list__item" dictionary="weight_brand">Бренд</li>
+            <li class="header-select-list__item" dictionary="weight_bu">БЮ</li>
+            <li class="header-select-list__item" dictionary="weight_pharmacy">Аптечная сеть</li>
+            <li class="header-select-list__item" dictionary="weight_other">Прочие элементы зоны ответственности</li>
         </ul>
 
         <div class="sidebar">
@@ -56,155 +65,25 @@
             <div class="logo"></div>
         </div>
         <div class="content content--active">
-            <div class="table table--dictionary_position">
+            <div class="table table--active table--dictionary">
                 <div class="table-head">
                     <table>
                         <colgroup>
-                            <col width="1/3"></col>
-                            <col width="1/3"></col>
-                            <col width="1/3"></col>
                         </colgroup>
                         <tbody>
-                            <td><span>Наименование Должности</span></td>
-                            <td><span>Базовый Бонус</span></td>
-                            <td><span>Признак Группы</span></td>
                         </tbody>
                     </table>
                 </div>
                 <div class="table-body table-body--select">
                     <table>
                         <colgroup>
-                            <col width="1/3"></col>
-                            <col width="1/3"></col>
-                            <col width="1/3"></col>
                         </colgroup>
                         <tbody>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="table table--dictionary_bonus_position">
-                <div class="table-head">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                            <td><span>Наименование Бонусной Должности</span></td>
-                            <td><span>Тип расчета</span></td>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-body table-body--select">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="table table--dictionary_brand">
-                <div class="table-head">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                            <td><span>Наименование Бренда</span></td>
-                            <td><span>Наименование Кривой</span></td>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-body table-body--select">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="table table--dictionary_bu">
-                <div class="table-head">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                            <td><span>Наименование БЮ</span></td>
-                            <td><span>Наименование Кривой</span></td>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-body table-body--select">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="table table--dictionary_pharmacy">
-                <div class="table-head">
-                    <table>
-                        <colgroup>
-                            <col width="1/3"></col>
-                            <col width="1/3"></col>
-                            <col width="1/3"></col>
-                        </colgroup>
-                        <tbody>
-                            <td><span>Наименование аптечной сети</span></td>
-                            <td><span>Наименование БЮ</span></td>
-                            <td><span>Наименование Кривой</span></td>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-body table-body--select">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="table table--dictionary_other">
-                <div class="table-head">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                            <td><span>Наименование элементов зоны ответственности</span></td>
-                            <td><span>Наименование Кривой</span></td>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-body table-body--select">
-                    <table>
-                        <colgroup>
-                            <col width="1/2"></col>
-                            <col width="1/2"></col>
-                        </colgroup>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
         </div>
 
         <script src="assets/js/bundle.min.js" charset="utf-8"></script>

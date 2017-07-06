@@ -6,7 +6,7 @@
     &--main{
         display: block;
     }
-    
+
     &--active{
         display: block;
     }
@@ -107,6 +107,7 @@
             text-align: left;
             outline: none;
             width: 100%;
+            background: none;
 
             &:focus {
                 outline: none;
@@ -127,6 +128,12 @@
         position: relative;
         display: flex;
         align-items: center;
+
+        &--empty{
+            span{
+                opacity: 0.5;
+            }
+        }
 
         span {
             display: inline-block;
@@ -174,7 +181,7 @@
             margin: 0;
             width: 100%;
             padding: 10px 17px;
-            font-size: 13px;
+            font-size: 15px;
             display: block;
             transition: 0.3s;
             width: 100%;

@@ -21,8 +21,9 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         event.stopPropagation();
         $('.header-select-list').removeClass(visible);
-        $(".table").removeClass('table--active');
-        $(".table--" + $(this).attr('type')).addClass('table--active');
+        // $(".table").removeClass('table--active');
+        // $(".table--" + $(this).attr('type')).addClass('table--active');
+        Dictionary.init($(this).attr('dictionary')).load();
     });
     //select first view
     $(".admin-menu__item--active").click();

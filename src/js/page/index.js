@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
             plan: 1000,
             fact: 1500,
             progress: '50%',
-            bonus: '7000 P',
+            bonus: '7 000 P',
             prediction: {
                 value: 130,
                 max: 200
@@ -50,15 +50,5 @@ jQuery(document).ready(function($) {
     }
 
     loadData();
-
-    $("body").on('keyup', '.table-field input', function(event) {
-        event.preventDefault();
-        this.value = this.value.replace(/[^0-9.]/g, "");
-        if(event.keyCode == 13){
-            $(this).blur();
-        }
-        // console.log(event);
-    });
-
 
 });

@@ -3,8 +3,8 @@ var Profile = {
         return {
             name: 'Петров Константин Константинович',
             position: 'Администратор',
-            bonus: '31234 P',
-            bonus_calc: '12313 P',
+            bonus: '31 234 P',
+            bonus_calc: '12 313 P',
             ratio: '46 %',
             date: 'Вторник, 23 мая 2017',
         }
