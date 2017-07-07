@@ -2,6 +2,8 @@ var Number = {
     format: function(number){
         number = String(number);
         number = number.replace(/[^0-9.]/g, "");
+        if(number.trim() = "")
+            number = "0";
         var array = number.split('').reverse(),
             res = "",
             count = 0;

@@ -144,7 +144,10 @@
             outline: none;
             width: 100%;
             font-size: 18px;
-            padding: 16px 20px 12px 0;
+            padding: 16px 0px 12px 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         i {
@@ -180,13 +183,13 @@
         &__item {
             margin: 0;
             width: 100%;
-            padding: 10px 17px;
+            padding: 10px 7px 10px 17px;
             font-size: 15px;
             display: block;
             transition: 0.3s;
             width: 100%;
             cursor: pointer;
-
+            word-wrap: break-word;
             &:hover {
                 background: #eee;
             }
