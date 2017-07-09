@@ -1,10 +1,10 @@
-var Number = {
-    format: function(number){
-        number = String(number);
-        number = number.replace(/[^0-9.]/g, "");
-        if(number.trim() = "")
-            number = "0";
-        var array = number.split('').reverse(),
+const number = {
+    format: function(value){
+        value = String(value);
+        value = value.replace(/[^0-9.]/g, "");
+        if(value.trim() == "")
+            value = "0";
+        var array = value.split('').reverse(),
             res = "",
             count = 0;
 
@@ -22,7 +22,7 @@ var Number = {
 jQuery(document).ready(function($) {
     $(".number-format").each(function(index, el) {
         $(this).text(
-            Number.format(
+            number.format(
                 $(this).text()
             )
         );

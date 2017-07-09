@@ -1,0 +1,51 @@
+.popup{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    transition: 0.3s;
+    overflow: auto;
+    &--visible{
+        display: block;
+        z-index: 10000;
+    }
+    &__overlay{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(#000, 0.5);
+    }
+    &__content{
+        position: relative;
+        padding: 30px 8px 15px;
+        display: block;
+        width: 480px;
+        margin: 50vh auto 0;
+        transform: translateY(-50%);
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: 0 4px 18px -1px rgba(0,0,0,.36);
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding: 0px 15px;
+    }
+    &-list{
+        &__item{
+            cursor: pointer;
+            background: #fff;
+            transition: 0.3s;
+            font-size: 15px;
+            padding: 18px 15px;
+            &:hover{
+                background: #eeeeee;
+            }
+        }
+    }
+}

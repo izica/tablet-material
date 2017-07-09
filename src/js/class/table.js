@@ -34,7 +34,7 @@ const Table = {
         if(type == 'field'){
             cell.text('').append(
                 $('<div></div>').addClass('table-field').addClass('table-field--number').append(
-                    $('<input type="text"/>').val(Number.format(data))
+                    $('<input type="text"/>').val(number.format(data))
                 )
             )
         }

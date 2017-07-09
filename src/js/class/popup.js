@@ -7,3 +7,8 @@ var Popup = {
         $(".popup").removeClass('popup--visible');
     }
 }
+jQuery(document).ready(function($) {
+    $(".popup__overlay").click(function(event) {
+        Popup.hide();
+    });
+});

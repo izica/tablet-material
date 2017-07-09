@@ -6,7 +6,7 @@
         width: calc(100% - 18px);
         position: relative;
         font-size: 13px;
-        font-weight: 700;
+        font-weight: 400;
         color: #636363;
         transition: 0.3s;
         padding: 8px 0px 8px 21px;
@@ -16,6 +16,7 @@
         }
         &--active{
             background: #eeeeee;
+            font-weight: 700;
             i{
                 color: #00a8d9;
             }

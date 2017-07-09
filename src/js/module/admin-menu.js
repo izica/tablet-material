@@ -6,8 +6,19 @@ jQuery(document).ready(function($) {
         $('.header-select--' + $(this).attr('type')).addClass('header-select--visible');
     });
     $(".admin-menu__item").click(function(event) {
+        let content = $(this).attr('content');
+        $(".content").removeClass('content--active');
+        $('.content--' + content).addClass('content--active');
+
+        if(content == 'curve'){
+            $(".header-button--edit").show();
+        }else{
+            $(".header-button--edit").hide();
+        }
+    });
+    $(".admin-menu__item").click(function(event) {
         let select = $('.header-select--' + $(this).attr('type'));
         let list = select.attr('type');
-        $(".header-select-list--" + list).find('li').first().click();
+        $(".popup--" + list).find('.popup-list__item').first().click();
     });
 });

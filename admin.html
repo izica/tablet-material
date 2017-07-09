@@ -14,57 +14,157 @@
                 <span>Режим редактирования</span>
             </div>
             <div class="header-select header-select--dictionary header-select--visible" type="dictionary">
-                <span>Выбор справочника</span>
+                <span></span>
                 <i class="mdi mdi-chevron-down"></i>
             </div>
             <div class="header-select header-select--weight" type="weight">
-                <span>Выбор справочника</span>
+                <span></span>
                 <i class="mdi mdi-chevron-down"></i>
+            </div>
+            <div class="header-select header-select--curve" type="curve">
+                <span></span>
+                <i class="mdi mdi-chevron-down"></i>
+            </div>
+            <div class="header-button header-button--edit">
+                <i class="mdi mdi-pencil"></i>
             </div>
             <div class="header-save">Сохранить</div>
         </div>
-        <!-- <div class="popup popup--save">
+        <!-- <div class="popup__footer">
+            <div class="popup__btn">Отмена</div>
+            <div class="popup__btn">Ок</div>
+        </div> -->
+        <div class="popup popup--dictionary">
             <div class="popup__overlay"></div>
-            <div class="popup__body">
-                <div class="popup__footer">
-                    <div class="popup__btn">Отмена</div>
-                    <div class="popup__btn">Ок</div>
+            <div class="popup__content">
+                <div class="popup__title">Выбор справочника</div>
+                <div class="popup-list">
+                    <div class="popup-list__item" dictionary="dictionary_position">Должность</div>
+                    <div class="popup-list__item" dictionary="dictionary_bonus_position">Бонусная Должность</div>
+                    <div class="popup-list__item" dictionary="dictionary_brand">Бренд</div>
+                    <div class="popup-list__item" dictionary="dictionary_bu">БЮ</div>
+                    <div class="popup-list__item" dictionary="dictionary_pharmacy">Аптечная сеть</div>
+                    <div class="popup-list__item" dictionary="dictionary_other">Прочие элементы зоны ответственности</div>
                 </div>
             </div>
-        </div> -->
-        <ul class="header-select-list header-select-list--dictionary">
-            <li class="header-select-list__item" dictionary="dictionary_position">Должность</li>
-            <li class="header-select-list__item" dictionary="dictionary_bonus_position">Бонусная Должность</li>
-            <li class="header-select-list__item" dictionary="dictionary_brand">Бренд</li>
-            <li class="header-select-list__item" dictionary="dictionary_bu">БЮ</li>
-            <li class="header-select-list__item" dictionary="dictionary_pharmacy">Аптечная сеть</li>
-            <li class="header-select-list__item" dictionary="dictionary_other">Прочие элементы зоны ответственности</li>
-        </ul>
-        <ul class="header-select-list header-select-list--weight">
-            <li class="header-select-list__item" dictionary="weight_brand">Бренд</li>
-            <li class="header-select-list__item" dictionary="weight_bu">БЮ</li>
-            <li class="header-select-list__item" dictionary="weight_pharmacy">Аптечная сеть</li>
-            <li class="header-select-list__item" dictionary="weight_other">Прочие элементы зоны ответственности</li>
-        </ul>
+        </div>
+        <div class="popup popup--weight">
+            <div class="popup__overlay"></div>
+            <div class="popup__content">
+                <div class="popup__title">Выбор справочника</div>
+                <div class="popup-list">
+                    <div class="popup-list__item" dictionary="weight_brand">Бренд</div>
+                    <div class="popup-list__item" dictionary="weight_bu">БЮ</div>
+                    <div class="popup-list__item" dictionary="weight_pharmacy">Аптечная сеть</div>
+                    <div class="popup-list__item" dictionary="weight_other">Прочие элементы зоны ответственности</div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--curve">
+            <div class="popup__overlay"></div>
+            <div class="popup__content">
+                <div class="popup__title">Curve name</div>
+                <div class="popup-list">
+                    <div class="popup-list__item">Extraordinarily long title Curve name 1</div>
+                    <div class="popup-list__item">Extraordinarily long title Curve name 2</div>
+                    <div class="popup-list__item">Extraordinarily long title Curve name 3</div>
+                    <div class="popup-list__item">Extraordinarily long title Curve name 4</div>
+                    <div class="popup-list__item">Extraordinarily long title Curve name 5</div>
+                </div>
+            </div>
+        </div>
 
         <div class="sidebar">
             <div class="admin-menu">
-                <div class="admin-menu__item">
+                <div class="admin-menu__item" content="curve" type="curve">
                     <i class="mdi mdi-chart-line"></i>
                     <span>Бонусные кривые</span>
                 </div>
-                <div class="admin-menu__item admin-menu__item--active" type="dictionary">
+                <div class="admin-menu__item admin-menu__item--active" type="dictionary" content="dictionary">
                     <i class="mdi mdi-book-variant"></i>
                     <span>Справочники</span>
                 </div>
-                <div class="admin-menu__item" type="weight">
+                <div class="admin-menu__item" type="weight" content="dictionary">
                     <i class="mdi mdi-poll-box"></i>
                     <span>Веса</span>
                 </div>
             </div>
             <div class="logo"></div>
         </div>
-        <div class="content content--active">
+        <div class="content content--curve">
+            <div class="curve">
+                <div class="curve__left">
+                    <svg class="curve-graph">
+
+                    </svg>
+                </div>
+                <div class="curve__right">
+                    <div class="curve__title">Curve shape</div>
+                    <div class="curve__info">
+                        <div class="curve-points">
+                            <div class="curve-points__item">
+                                <div class="curve-points__label">Start point</div>
+                                <input type="text" class="curve-points__field" value="80%">
+                            </div>
+                            <div class="curve-points__item">
+                                <div class="curve-points__label">(Cap finish point)</div>
+                                <input type="text" class="curve-points__field" value="80%">
+                            </div>
+                        </div>
+                        <div class="curve-shape">
+                            <div class="curve-shape__item">
+                                <div class="curve-shape__label">1st part shape</div>
+                                <div class="curve-shape__btn">
+                                    <i class="mdi mdi-minus"></i>
+                                </div>
+                                <input type="text" class="curve-shape__field" value="0,86">
+                                <div class="curve-shape__btn">
+                                    <i class="mdi mdi-plus"></i>
+                                </div>
+                            </div>
+                            <div class="curve-shape__item">
+                                <div class="curve-shape__label">2nd part shape</div>
+                                <div class="curve-shape__btn">
+                                    <i class="mdi mdi-minus"></i>
+                                </div>
+                                <input type="text" class="curve-shape__field" value="1,86">
+                                <div class="curve-shape__btn">
+                                    <i class="mdi mdi-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="curve-bonus">
+                            <div class="curve-bonus__item">
+                                <div class="curve-bonus__label">Base bonus</div>
+                                <div class="curve-bonus__value">140 630,00</div>
+                            </div>
+                            <div class="curve-bonus__item">
+                                <div class="curve-bonus__label">Bonus +</div>
+                                <div class="curve-bonus__value">210 000,00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="curve__title">Target achievement simulation</div>
+                    <div class="curve__info">
+                        <div class="curve-slider">
+                            <div class="curve-slider__body"></div>
+                            <input type="text" class="curve-slider__value" value="135%">
+                        </div>
+                        <div class="curve-bonus">
+                            <div class="curve-bonus__item">
+                                <div class="curve-bonus__label">Base bonus</div>
+                                <div class="curve-bonus__value">188 319 P</div>
+                            </div>
+                            <div class="curve-bonus__item">
+                                <div class="curve-bonus__label">% of base bonus</div>
+                                <div class="curve-bonus__value">135%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content content--dictionary content--active">
             <div class="table table--active table--dictionary">
                 <div class="table-head">
                     <table>
