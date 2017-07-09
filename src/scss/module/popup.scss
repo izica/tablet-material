@@ -1,50 +1,56 @@
-.popup{
+.popup {
     position: fixed;
-    display: none;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
+    display: none;
+    overflow: auto;
     height: 100vh;
     transition: 0.3s;
-    overflow: auto;
-    &--visible{
-        display: block;
+
+    &--visible {
         z-index: 10000;
+        display: block;
     }
-    &__overlay{
+
+    &__overlay {
         position: fixed;
         top: 0;
         right: 0;
-        left: 0;
         bottom: 0;
-        background: rgba(#000, 0.5);
+        left: 0;
+        background: rgba(#000, .5);
     }
-    &__content{
+
+    &__content {
         position: relative;
-        padding: 30px 8px 15px;
         display: block;
         width: 480px;
         margin: 50vh auto 0;
+        padding: 30px 8px 15px;
         transform: translateY(-50%);
-        background: #fff;
         border-radius: 3px;
+        background: #fff;
         box-shadow: 0 4px 18px -1px rgba(0,0,0,.36);
     }
-    &__title{
-        font-weight: 700;
+
+    &__title {
         font-size: 18px;
+        font-weight: 700;
         margin-bottom: 15px;
-        padding: 0px 15px;
+        padding: 0 15px;
     }
-    &-list{
-        &__item{
-            cursor: pointer;
-            background: #fff;
-            transition: 0.3s;
+
+    &-list {
+        &__item {
             font-size: 15px;
             padding: 18px 15px;
-            &:hover{
-                background: #eeeeee;
+            cursor: pointer;
+            transition: 0.3s;
+            background: #fff;
+
+            &:hover {
+                background: #eee;
             }
         }
     }

@@ -94,9 +94,18 @@
         <div class="content content--curve">
             <div class="curve">
                 <div class="curve__left">
-                    <svg class="curve-graph">
+                    <div class="curve-graph">
+                        <div class="curve-graph-lines">
+                            <div class="curve-graph-lines-x"></div>
+                            <div class="curve-graph-lines-y"></div>
+                        </div>
+                        <div class="curve-graph-target"></div>
+                        <div class="curve-graph-base"></div>
+                        <svg class="curve-graph-svg">
 
-                    </svg>
+                        </svg>
+                        <div class="curve-graph-point"></div>
+                    </div>
                 </div>
                 <div class="curve__right">
                     <div class="curve__title">Curve shape</div>
@@ -107,7 +116,7 @@
                                 <input type="text" class="curve-points__field" value="80%">
                             </div>
                             <div class="curve-points__item">
-                                <div class="curve-points__label">(Cap finish point)</div>
+                                <div class="curve-points__label">Cap (finish point)</div>
                                 <input type="text" class="curve-points__field" value="80%">
                             </div>
                         </div>

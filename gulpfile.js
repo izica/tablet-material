@@ -22,6 +22,7 @@ var path = {
         css:    './src/scss/global.scss',
         js: [
         	'./src/js/lib/*.js',
+            './src/js/class/_fakedata.js',
             './src/js/class/*.js',
         	'./src/js/module/*.js',
         	'./src/js/page/*.js',
