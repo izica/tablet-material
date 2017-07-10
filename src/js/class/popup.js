@@ -5,6 +5,9 @@ var Popup = {
     },
     hide: function(){
         $(".popup").removeClass('popup--visible');
+    },
+    get: function(name){
+        return $(".popup--" + name);
     }
 }
 jQuery(document).ready(function($) {

@@ -1,19 +1,4 @@
 jQuery(document).ready(function($) {
-    var slider = $(".curve-slider__body").append('<div><div>').find('div')[0];
-    noUiSlider.create(slider, {
-        start: 100,
-        connect: [true, false],
-        range: {
-        	'min': 60,
-        	'max': 130
-        }
-    });
-    slider.noUiSlider.on('slide', function(){
-        let value = parseInt(slider.noUiSlider.get());
-        $(".curve-slider__value").val(value + "%")
-    });
-
-
     $(".curve-points__field").focus(function(event) {
         this.value = this.value.replace(/[^0-9.]/g, "");
     });
@@ -24,10 +9,16 @@ jQuery(document).ready(function($) {
 
     $(".curve-points__field").keyup(function(event) {
         this.value = parseInt(this.value.replace(/[^0-9.]/g, ""));
+        
+        if(this.value.trim() == "")
+            this.value = 0;
+
         if(parseInt(this.value) < 0)
             this.value = 0
+
         if(parseInt(this.value) > parseInt($(this).attr('max')))
             this.value = parseInt($(this).attr('max'));
+
         if(event.keyCode == 13){
             $(this).blur();
         }
@@ -46,6 +37,5 @@ jQuery(document).ready(function($) {
         $(this).parent().find('input').val(value);
     });
 
-    Curve.load();
-
+    Curve.getList();
 });

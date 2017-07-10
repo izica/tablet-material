@@ -30,10 +30,28 @@
             </div>
             <div class="header-save">Сохранить</div>
         </div>
-        <!-- <div class="popup__footer">
-            <div class="popup__btn">Отмена</div>
-            <div class="popup__btn">Ок</div>
-        </div> -->
+        <div class="popup popup--edit">
+            <div class="popup__overlay"></div>
+            <div class="popup__content">
+                <div class="popup__title">Curve name</div>
+                <input type="text" class="popup__field">
+                <div class="popup__footer">
+                    <div class="popup__btn popup__btn--cancel">Отмена</div>
+                    <div class="popup__btn popup__btn--ok">Ок</div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--save">
+            <div class="popup__overlay"></div>
+            <div class="popup__content">
+                <div class="popup__text">Сохранить изменения?</div>
+                <div class="popup__footer">
+                    <div class="popup__btn popup__btn--cancel">Отмена</div>
+                    <div class="popup__btn popup__btn--ok">Ок</div>
+                </div>
+            </div>
+        </div>
+
         <div class="popup popup--dictionary">
             <div class="popup__overlay"></div>
             <div class="popup__content">
@@ -65,11 +83,6 @@
             <div class="popup__content">
                 <div class="popup__title">Curve name</div>
                 <div class="popup-list">
-                    <div class="popup-list__item">Extraordinarily long title Curve name 1</div>
-                    <div class="popup-list__item">Extraordinarily long title Curve name 2</div>
-                    <div class="popup-list__item">Extraordinarily long title Curve name 3</div>
-                    <div class="popup-list__item">Extraordinarily long title Curve name 4</div>
-                    <div class="popup-list__item">Extraordinarily long title Curve name 5</div>
                 </div>
             </div>
         </div>
@@ -107,6 +120,7 @@
                             </svg>
                         </div>
                         <div class="curve-graph-point"></div>
+                        <div class="curve-graph-null">1x1000₽</div>
                     </div>
                 </div>
                 <div class="curve__right">
@@ -158,7 +172,9 @@
                     <div class="curve__title">Target achievement simulation</div>
                     <div class="curve__info">
                         <div class="curve-slider">
-                            <div class="curve-slider__body"></div>
+                            <div class="curve-slider__body">
+                                <div></div>
+                            </div>
                             <input type="text" class="curve-slider__value" value="135%">
                         </div>
                         <div class="curve-bonus">
@@ -196,7 +212,7 @@
             </div>
 
         </div>
-        <script src="//d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="assets/js/bundle.min.js" charset="utf-8"></script>
     </body>
 </html>

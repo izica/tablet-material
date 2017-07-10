@@ -3,25 +3,48 @@ var Curve = {
     x: 0,
     bonus_plus: 0,
     bonus_base: [0, 0],
+    point_start: 0,
+    point_finish: 0,
     target: 0,
     points: [],
+    slider: null,
     init(data){
         this.bonus_plus = data.bonus_plus;
         this.bonus_base = data.bonus_base;
         this.target = data.target;
         this.points = data.points;
+        this.point_start = data.point_start;
+        this.point_finish = data.point_finish;
 
         $(".curve-points__field--start").val(data.point_start + '%');
         $(".curve-points__field--finish").val(data.point_finish + '%');
         $(".curve-shape__field--1").val(data.shape_1);
         $(".curve-shape__field--2").val(data.shape_2);
-        $(".curve-bonus__value--base").text(number.format(data.bonus_base));
+        $(".curve-bonus__value--base").text(number.format(data.bonus_base[1]));
         $(".curve-bonus__value--plus").text(number.format(data.bonus_plus));
-        
+
         return this;
     },
     draw: function(data){
-        this.renderLines().renderBonus().renderTarget().renderGraph();
+        this.renderSlider().renderLines().renderBonus().renderTarget().renderGraph();
+        return this;
+    },
+    renderSlider: function(){
+        this.slider = $('.curve-slider__body').find('div')[0];
+        noUiSlider.create(this.slider, {
+            start: 100,
+            connect: [true, false],
+            range: {
+                'min': this.point_start,
+                'max': this.point_finish
+            }
+        });
+        this.slider.noUiSlider.on('slide', function(){
+            let value = parseInt(this.slider.noUiSlider.get());
+            $(".curve-slider__value").val(value + "%")
+            this.setTarget(value);
+        }.bind(this));
+
         return this;
     },
     renderLines: function(){
@@ -58,8 +81,20 @@ var Curve = {
         });
         return this;
     },
-    setTarget: function(index){
-        this.target = index;
+    setTarget: function(value){
+        let dif = 9999,
+            dif_index = 0;
+        for (var i = 0; i < this.points.length; i++) {
+            let dif_x = Math.abs(value - this.points[i][0]);
+            console.log(dif_x);
+            if(dif_x < dif){
+                dif = dif_x;
+                dif_index = i;
+            }
+        }
+        console.log(dif);
+
+        this.target = dif_index;
         return this.renderTarget();
     },
     renderGraph: function(){
@@ -80,8 +115,8 @@ var Curve = {
         var data = {
             bonus_plus: 240000,
             bonus_base: [100, 140630],
-            point_start: 80,
-            point_finish: 130,
+            point_start: 60,
+            point_finish: 150,
             shape_1: 0.77,
             shape_2: 1.35,
             target: 130, //target - point index,
@@ -101,5 +136,16 @@ var Curve = {
         //load data from ajax
         var data = this.fakeData();
         this.init(data).draw();
+    },
+    getList(){
+        $(".popup--curve").find('.popup-list__item').remove();
+        var list = [
+            'curve 1',
+            'curve 2',
+            'curve 3'
+        ];
+        for (var i = 0; i < list.length; i++) {
+            $(".popup--curve").find('.popup-list').append('<div class="popup-list__item">' + list[i] + '</div>')
+        }
     }
 }
