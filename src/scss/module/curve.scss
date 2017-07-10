@@ -182,15 +182,32 @@ $cgl_color: #efefef;
     display: block;
     width: 100%;
     height: 100%;
-
+    &-point{
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        background: #02a6dc;
+        border-radius: 50%;
+        margin-left: -6px;
+        margin-bottom: -6px;
+        z-index: 25;
+    }
     &-svg{
+        z-index: 20;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        transform: rotateX(180deg);
+        svg{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
     }
     &-base{
+        z-index: 15;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -198,7 +215,7 @@ $cgl_color: #efefef;
         border-top: 2px solid #7900bf;
         border-right: 2px solid #7900bf;
         background: rgba(#7900bf, 0.2);
-        z-index: 1000;
+        z-index: 10;
         &::after{
             content: 'Base Bonus';
             color: #27568d;
@@ -217,6 +234,8 @@ $cgl_color: #efefef;
         border-top: 3px solid #02a6dc;
         border-right:3px solid #02a6dc;
         background: rgba(#02a6dc, 0.2);
+        box-sizing: content-box;
+        z-index: 13;
     }
 
     &-lines {
@@ -255,6 +274,7 @@ $cgl_color: #efefef;
                         bottom: -37px;
                         left: 0px;
                         display: block;
+                        color: $cgl_color;
 
                         &::after {
                             position: absolute;
@@ -294,12 +314,13 @@ $cgl_color: #efefef;
                     display: none;
                 }
 
-                &:nth-child(3n + 3), &:last-child {
+                &:nth-child(3n + 3){
                     span {
                         position: absolute;
                         top: 0;
                         left: -50px;
                         display: block;
+                        color: $cgl_color;
 
                         &::after {
                             position: absolute;

@@ -101,9 +101,11 @@
                         </div>
                         <div class="curve-graph-target"></div>
                         <div class="curve-graph-base"></div>
-                        <svg class="curve-graph-svg">
-
-                        </svg>
+                        <div class="curve-graph-svg">
+                            <svg>
+                                <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke-width="4" stroke="#CD6B11" fill="transparent"/>
+                            </svg>
+                        </div>
                         <div class="curve-graph-point"></div>
                     </div>
                 </div>
@@ -113,31 +115,31 @@
                         <div class="curve-points">
                             <div class="curve-points__item">
                                 <div class="curve-points__label">Start point</div>
-                                <input type="text" class="curve-points__field" value="80%">
+                                <input type="text" class="curve-points__field curve-points__field--start" value="80%" max="100">
                             </div>
                             <div class="curve-points__item">
                                 <div class="curve-points__label">Cap (finish point)</div>
-                                <input type="text" class="curve-points__field" value="80%">
+                                <input type="text" class="curve-points__field curve-points__field--finish" value="80%" max="200">
                             </div>
                         </div>
                         <div class="curve-shape">
                             <div class="curve-shape__item">
                                 <div class="curve-shape__label">1st part shape</div>
-                                <div class="curve-shape__btn">
+                                <div class="curve-shape__btn curve-shape__btn--minus">
                                     <i class="mdi mdi-minus"></i>
                                 </div>
-                                <input type="text" class="curve-shape__field" value="0,86">
-                                <div class="curve-shape__btn">
+                                <input type="text" class="curve-shape__field curve-shape__field--1" value="0,86">
+                                <div class="curve-shape__btn curve-shape__btn--plus">
                                     <i class="mdi mdi-plus"></i>
                                 </div>
                             </div>
                             <div class="curve-shape__item">
                                 <div class="curve-shape__label">2nd part shape</div>
-                                <div class="curve-shape__btn">
+                                <div class="curve-shape__btn curve-shape__btn--minus">
                                     <i class="mdi mdi-minus"></i>
                                 </div>
-                                <input type="text" class="curve-shape__field" value="1,86">
-                                <div class="curve-shape__btn">
+                                <input type="text" class="curve-shape__field curve-shape__field--2" value="1,86">
+                                <div class="curve-shape__btn curve-shape__btn--plus">
                                     <i class="mdi mdi-plus"></i>
                                 </div>
                             </div>
@@ -145,11 +147,11 @@
                         <div class="curve-bonus">
                             <div class="curve-bonus__item">
                                 <div class="curve-bonus__label">Base bonus</div>
-                                <div class="curve-bonus__value">140 630,00</div>
+                                <div class="curve-bonus__value curve-bonus__value--base">140 630,00</div>
                             </div>
                             <div class="curve-bonus__item">
                                 <div class="curve-bonus__label">Bonus +</div>
-                                <div class="curve-bonus__value">210 000,00</div>
+                                <div class="curve-bonus__value curve-bonus__value--plus">210 000,00</div>
                             </div>
                         </div>
                     </div>
@@ -161,7 +163,7 @@
                         </div>
                         <div class="curve-bonus">
                             <div class="curve-bonus__item">
-                                <div class="curve-bonus__label">Base bonus</div>
+                                <div class="curve-bonus__label">Bonus</div>
                                 <div class="curve-bonus__value">188 319 P</div>
                             </div>
                             <div class="curve-bonus__item">
@@ -194,7 +196,7 @@
             </div>
 
         </div>
-
+        <script src="//d3js.org/d3.v3.min.js"></script>
         <script src="assets/js/bundle.min.js" charset="utf-8"></script>
     </body>
 </html>

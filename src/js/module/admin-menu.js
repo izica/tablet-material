@@ -12,6 +12,7 @@ jQuery(document).ready(function($) {
 
         if(content == 'curve'){
             $(".header-button--edit").show();
+            Curve.load();
         }else{
             $(".header-button--edit").hide();
         }
