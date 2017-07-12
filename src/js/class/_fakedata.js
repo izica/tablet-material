@@ -18,8 +18,8 @@ var FakeData = {
             },
             chart: {
                 calc: {
-                    value: 70000,
-                    progress: 40
+                    value: 140000,
+                    progress: 50
                 },
                 base: {
                     value: 210000,
@@ -56,7 +56,12 @@ var FakeData = {
             response_rows = [];
         for (var i = 0; i < dictionary_columns.length; i++) {
             if(dictionary_columns[i].type == 'field'){
-                response_row.push("Текстовое значение");
+                if(dictionary_columns[i].number === true){
+                    response_row.push("10000");
+                }
+                else{
+                    response_row.push("Текстовое значение");
+                }
                 response_columns.push(field_column)
             }else{
                 response_row.push(select_column.values[FakeData.random(0, 2)]);

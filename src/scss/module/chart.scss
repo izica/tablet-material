@@ -60,7 +60,7 @@
             }
             div{
                 display: block;
-                margin-right: 4px;
+                margin-right: 6px;
                 width: 14px;
                 height: 14px;
             }
@@ -99,7 +99,7 @@
         &-column{
             vertical-align: top;
             padding: 9px 17px;
-            font-size: 17px;
+            font-size: 16px;
             line-height: 23px;
             position: relative;
             min-height: 72px;
@@ -118,31 +118,31 @@
         width: 100%;
         &__base{
             height: 100%;
-            background: #bfdde6;
+            background: #C0DDE6;
             position: relative;
             &::after{
                 content: attr(value);
-                bottom: -23px;
-                font-size: 12px;
+                bottom: -20px;
+                font-size: 10px;
                 font-weight: 400;
-                color: #82a1a7;
+                color: #739BA6;
                 position: absolute;
                 left: 0;
             }
         }
         &__plus{
             height: 100%;
-            background: #e9bb92;
+            background: rgba(#CD6B11, 0.2);
             position: relative;
             &--active{
-                background: #e9bb92;
+                background: rgba(#CD6B11, 0.4574);
             }
             &::after{
                 content: attr(value);
-                bottom: -23px;
-                font-size: 12px;
+                bottom: -20px;
+                font-size: 10px;
                 font-weight: 400;
-                color: #c1742e;
+                color: #CD6B11;
                 position: absolute;
                 right: 0;
             }
@@ -152,14 +152,14 @@
             top: 0px;
             left: 0px;
             height: 50%;
-            background: #00bcd2;
+            background: #00BBD3;
             &::after{
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 700;
                 color: #fff;
                 position: absolute;
-                top: 0;
-                right: 12px;
+                top: -1px;
+                right: 7px;
                 content: attr(value);
                 line-height: 21px;
             }

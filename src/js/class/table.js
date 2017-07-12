@@ -33,8 +33,11 @@ const Table = {
         }
         if(type == 'field'){
             cell.text('').append(
-                $('<div></div>').addClass('table-field').addClass('table-field--number').append(
-                    $('<input type="text"/>').val(number.format(data))
+                $('<div></div>').addClass('table-field')
+                    .addClass('table-field--ruble')
+                    .addClass('table-field--number').append(
+
+                    $('<input type="text"/>').val(number.format(data) + ' ₽')
                 )
             )
         }

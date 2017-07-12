@@ -2,14 +2,14 @@
     padding: 28px 24px;
 
     &__label {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 25px;
         margin-bottom: 3px;
-        color: #858487;
+        color: #808285;
     }
 
     &__text {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 700;
         color: #000;
     }
@@ -17,7 +17,8 @@
     &__line {
         width: 67%;
         height: 2px;
-        margin: 6px 0;
-        background: #899dbe;
+        margin: 7px 0 5px;
+        opacity: 0.485;
+        background: #00408B;
     }
 }

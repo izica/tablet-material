@@ -26,7 +26,16 @@ var Curve = {
         return this;
     },
     draw: function(data){
-        this.renderSlider().renderLines().renderBonus().renderTarget().renderGraph();
+        this.renderSlider().renderLines().renderBonus().renderTarget().renderText().renderGraph();
+        return this;
+    },
+    renderText(){
+        let left = (85 * (this.points[this.points.length - 1][0] / 220)) + "%",
+            bottom = (102 * (this.points[this.points.length - 1][1] / (this.bonus_plus + 10000))) + "%";
+        $(".curve-graph-text").css({
+            bottom: bottom,
+            left: left
+        });
         return this;
     },
     renderSlider: function(){

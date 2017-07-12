@@ -1,6 +1,10 @@
 jQuery(document).ready(function($) {
-    $(".curve-points__field").focus(function(event) {
+    $(".curve-shape__field").focus(function(event) {
         this.value = this.value.replace(/[^0-9.]/g, "");
+    });
+
+    $(".curve-points__field").focus(function(event) {
+        this.value = this.value.replace(/[^0-9\.]/g, "");
     });
 
     $(".curve-points__field").blur(function(event) {
@@ -8,8 +12,11 @@ jQuery(document).ready(function($) {
     });
 
     $(".curve-points__field").keyup(function(event) {
-        this.value = parseInt(this.value.replace(/[^0-9.]/g, ""));
-        
+        if(event.keyCode == 37 || event.keyCode == 39)
+            return;
+
+        this.value = this.value.replace(/[^0-9\.]/g, "");
+
         if(this.value.trim() == "")
             this.value = 0;
 

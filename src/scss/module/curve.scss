@@ -22,7 +22,7 @@
     }
 
     &__title {
-        font-size: 16px;
+        font-size: 17px;
         font-weight: 700;
         padding: 16px 15px;
         color: #008dcc;
@@ -41,7 +41,7 @@
         }
 
         &__label {
-            font-size: 15px;
+            font-size: 16px;
             color: #9B9B9B;
         }
 
@@ -55,6 +55,7 @@
             border-bottom: 2px solid #e1e1e1;
             outline: none;
             background: none;
+            font-size: 16px;
 
             &:focus {
                 border-bottom: 2px solid #00a4cd;
@@ -106,6 +107,7 @@
             border-bottom: 2px solid #e1e1e1;
             outline: none;
             background: none;
+            font-size: 16px;
 
             &:focus {
                 border-bottom: 2px solid #00a4cd;
@@ -133,7 +135,7 @@
         }
 
         &__label {
-            font-size: 15px;
+            font-size: 16px;
             color: #9B9B9B;
         }
 
@@ -214,6 +216,12 @@ $cgl_color: rgba(#979797, 0.2);
             height: 100%;
         }
     }
+    &-text{
+        color: #CD6B11;
+        position: absolute;
+        font-weight: 700;
+        font-size: 12px;
+    }
     &-base{
         z-index: 15;
         position: absolute;
@@ -226,10 +234,10 @@ $cgl_color: rgba(#979797, 0.2);
         z-index: 10;
         &::after{
             content: 'Base Bonus';
-            color: #27568d;
+            color: #00408B;
             position: absolute;
             top: -20px;
-            font-size: 13px;
+            font-size: 12px;
             right: 2px;
             font-weight: 700;
         }

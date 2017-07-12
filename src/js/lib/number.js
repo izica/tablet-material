@@ -2,8 +2,7 @@ const number = {
     format: function(value){
         value = String(value);
         value = value.replace(/[^0-9.]/g, "");
-        if(value.trim() == "")
-            value = "0";
+        
         var array = value.split('').reverse(),
             res = "",
             count = 0;

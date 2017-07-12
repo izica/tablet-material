@@ -9,14 +9,17 @@ const Chart = {
         });
     },
     addRow(data){
+        let active = "";
+        if(data.chart.calc.progress > data.chart.base.progress)
+            active = 'chart-bonus__plus--active';
         $('.chart-body').append(
             '<div class="chart-body-row">'+
                 '<div class="chart-body-column">' + data.name + '</div>'+
                 '<div class="chart-body-column">'+
                     '<div class="chart-bonus">'+
-                        '<div class="chart-bonus__plus chart-bonus__progress" progress="' + data.chart.plus.progress + '%" value="' + data.chart.plus.value + ' Р">'+
-                            '<div class="chart-bonus__base chart-bonus__progress" progress="' + data.chart.base.progress + '%" value="' + data.chart.base.value + ' Р"></div>'+
-                            '<div class="chart-bonus__calc chart-bonus__progress" progress="' + data.chart.calc.progress + '%" value="' + data.chart.calc.value + ' Р"></div>'+
+                        '<div class="chart-bonus__plus ' + active + ' chart-bonus__progress" progress="' + data.chart.plus.progress + '%" value="' + number.format(data.chart.plus.value) + ' ₽">'+
+                            '<div class="chart-bonus__base chart-bonus__progress" progress="' + data.chart.base.progress + '%" value="' + number.format(data.chart.base.value) + ' ₽"></div>'+
+                            '<div class="chart-bonus__calc chart-bonus__progress" progress="' + data.chart.calc.progress + '%" value="' + number.format(data.chart.calc.value) + ' ₽"></div>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+
