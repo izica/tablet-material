@@ -140,9 +140,15 @@
         }
 
         &__value {
+            width: 100%;
             font-size: 18px;
             font-weight: 700;
             line-height: 28px;
+            display: block;
+            border: none;
+            padding: 0;
+            margin: 0;
+            outline: none!important;
         }
     }
 
@@ -193,6 +199,7 @@ $cgl_color: rgba(#979797, 0.2);
         margin-left: -6px;
         margin-bottom: -6px;
         z-index: 25;
+        transition: 0.4s;
     }
     &-null{
         position: absolute;
@@ -232,6 +239,7 @@ $cgl_color: rgba(#979797, 0.2);
         border-right: 2px solid #7900bf;
         background: rgba(#7900bf, 0.2);
         z-index: 10;
+        transition: 0.4s;
         &::after{
             content: 'Base Bonus';
             color: #00408B;
@@ -252,6 +260,7 @@ $cgl_color: rgba(#979797, 0.2);
         background: rgba(#02a6dc, 0.2);
         box-sizing: content-box;
         z-index: 13;
+        transition: 0.4s;
     }
 
     &-lines {

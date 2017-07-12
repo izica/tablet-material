@@ -4,11 +4,12 @@ jQuery(document).ready(function($) {
             return;
 
         event.preventDefault();
-        if(this.value != this.value.replace(/[^0-9.]/g, "")){
-            this.value = this.value.replace(/[^0-9.]/g, "");
-            if(this.value != "")
-                this.value = parseInt(this.value);
+        if(this.value != this.value.replace(/[^0-9]/g, "")){
+            this.value = this.value.replace(/[^0-9]/g, "");
         }
+        if(this.value != "")
+            if(this.value.length != String(parseInt(this.value)).length)
+                this.value = parseInt(this.value);
     });
 
     $("body").on('keyup', '.table-field input', function(event) {
@@ -35,7 +36,7 @@ jQuery(document).ready(function($) {
 
     $("body").on('focus', '.table-field--number input', function(event) {
         event.preventDefault();
-        this.value = this.value.replace(/[^0-9.]/g, "");
+        this.value = this.value.replace(/[^0-9]/g, "");
     });
 
 });

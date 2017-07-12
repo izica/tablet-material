@@ -20,13 +20,13 @@ var Curve = {
         $(".curve-points__field--finish").val(data.point_finish + '%');
         $(".curve-shape__field--1").val(data.shape_1);
         $(".curve-shape__field--2").val(data.shape_2);
-        $(".curve-bonus__value--base").text(number.format(data.bonus_base[1]));
+        $(".curve-bonus__value--base").val(number.format(data.bonus_base[1]));
         $(".curve-bonus__value--plus").text(number.format(data.bonus_plus));
 
         return this;
     },
     draw: function(data){
-        this.renderSlider().renderLines().renderBonus().renderTarget().renderText().renderGraph();
+        this.renderSlider().renderLines().renderBase().renderTarget().renderText().renderGraph();
         return this;
     },
     renderText(){
@@ -37,6 +37,10 @@ var Curve = {
             left: left
         });
         return this;
+    },
+    setSlider(value){
+        this.slider.noUiSlider.set(parseInt(value));
+        return this.setTarget(parseInt(value));
     },
     renderSlider: function(){
         this.slider = $('.curve-slider__body').find('div')[0];
@@ -54,6 +58,8 @@ var Curve = {
             this.setTarget(value);
         }.bind(this));
 
+        $(".curve-slider__value").attr("min", this.point_start).attr("max", this.point_finish);
+
         return this;
     },
     renderLines: function(){
@@ -70,7 +76,7 @@ var Curve = {
         }
         return this;
     },
-    renderBonus: function(){
+    renderBase: function(){
         let width = (100 * (this.bonus_base[0] / 220)) + "%",
             height = (100 * (this.bonus_base[1] / (this.bonus_plus + 10000))) + "%";
         $(".curve-graph-base").width(width);
@@ -105,6 +111,10 @@ var Curve = {
 
         this.target = dif_index;
         return this.renderTarget();
+    },
+    setBase(value){
+        this.bonus_base = [100, parseInt(value)];
+        return this.renderBase();
     },
     renderGraph: function(){
         var line = d3.svg.line()
