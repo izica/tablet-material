@@ -46,18 +46,49 @@ jQuery(document).ready(function($) {
             $(this).blur();
         }
     });
+    $(".curve-shape__field").blur(function(event) {
+        event.preventDefault();
+        let input = $(this),
+            value = parseFloat(input.val()),
+            max = parseFloat(input.attr('max')),
+            min = parseFloat(input.attr('min'));
+        if(value < min)
+            value = min;
+        if(value > max)
+            value = max;
+        value = Math.round(value * 100) / 100;
+        value = (String(value).length == 1) ? value + '.00' : value;
+        value = (String(value).length == 3) ? value + '0' : value;
+        input.val(value);
+    });
+
 
     $(".curve-shape__btn--minus").click(function(event) {
-        let value = $(this).parent().find('input').val();
-        value = parseFloat(value) - 0.01;
+        let input = $(this).parent().find('input'),
+            value = parseFloat(input.val()),
+            max = parseFloat(input.attr('max')),
+            min = parseFloat(input.attr('min'));
+        value = value - 0.01;
+        if(value < min)
+            value = min;
         value = Math.round(value * 100) / 100;
-        $(this).parent().find('input').val(value);
+        value = (String(value).length == 1) ? value + '.00' : value;
+        value = (String(value).length == 3) ? value + '0' : value;
+        input.val(value);
     });
+
     $(".curve-shape__btn--plus").click(function(event) {
-        let value = $(this).parent().find('input').val();
-        value = parseFloat(value) + 0.01;
+        let input = $(this).parent().find('input'),
+            value = parseFloat(input.val()),
+            max = parseFloat(input.attr('max')),
+            min = parseFloat(input.attr('min'));
+        value = value + 0.01;
+        if(value > max)
+            value = max;
         value = Math.round(value * 100) / 100;
-        $(this).parent().find('input').val(value);
+        value = (String(value).length == 1) ? value + '.00' : value;
+        value = (String(value).length == 3) ? value + '0' : value;
+        input.val(value);
     });
 
     //base bonus

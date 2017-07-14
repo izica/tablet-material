@@ -30,7 +30,7 @@ var Curve = {
         return this;
     },
     renderText(){
-        let left = (85 * (this.points[this.points.length - 1][0] / 220)) + "%",
+        let left = (85 * (this.points[this.points.length - 1][0] / 200)) + "%",
             bottom = (102 * (this.points[this.points.length - 1][1] / (this.bonus_plus + 10000))) + "%";
         $(".curve-graph-text").css({
             bottom: bottom,
@@ -67,7 +67,7 @@ var Curve = {
         $(".curve-graph-lines-y div").remove();
 
         this.y = Math.ceil(this.bonus_plus / 10000) + 2;
-        this.x = 22;
+        this.x = 20;
         for (var i = 0; i < this.x; i++) {
             $(".curve-graph-lines-x").append("<div><span>" + (i * 10) + "</span></div>");
         }
@@ -77,14 +77,14 @@ var Curve = {
         return this;
     },
     renderBase: function(){
-        let width = (100 * (this.bonus_base[0] / 220)) + "%",
+        let width = (100 * (this.bonus_base[0] / 200)) + "%",
             height = (100 * (this.bonus_base[1] / (this.bonus_plus + 10000))) + "%";
         $(".curve-graph-base").width(width);
         $(".curve-graph-base").height(height);
         return this;
     },
     renderTarget: function(){
-        let width = (100 * (this.points[this.target][0] / 220)) + "%",
+        let width = (100 * (this.points[this.target][0] / 200)) + "%",
             height = (100 * (this.points[this.target][1] / (this.bonus_plus + 10000))) + "%";
         $(".curve-graph-target").width(width);
         $(".curve-graph-target").height(height);
@@ -101,14 +101,11 @@ var Curve = {
             dif_index = 0;
         for (var i = 0; i < this.points.length; i++) {
             let dif_x = Math.abs(value - this.points[i][0]);
-            console.log(dif_x);
             if(dif_x < dif){
                 dif = dif_x;
                 dif_index = i;
             }
         }
-        console.log(dif);
-
         this.target = dif_index;
         return this.renderTarget();
     },
@@ -119,7 +116,7 @@ var Curve = {
     renderGraph: function(){
         var line = d3.svg.line()
             .x(function(d){
-                let value = d[0] * $("svg").width() / 220;
+                let value = d[0] * $("svg").width() / 200;
                 return value;
             })
             .y(function(d){

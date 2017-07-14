@@ -5,6 +5,9 @@
 
     &--main{
         display: block;
+        .table-body td{
+            padding: 19px 15px!important;
+        }
     }
 
     &--active{
@@ -33,13 +36,11 @@
                 display: inline-block;
                 vertical-align: top;
                 padding: 0 16px;
-                color: #000;
-                opacity: 0.5438;
+                color: rgba(#000, 0.5438);
                 line-height: 18px;
                 width: 100%;
                 position: relative;
                 font-weight: 600;
-                font-size: 14px;
 
                 &::after {
                     content: '';
