@@ -42,12 +42,36 @@ jQuery(document).ready(function($) {
             this.value = this.value.replace(/[^0-9.]/g, "");
         }
 
+        let input = $(this),
+            value = parseFloat(input.val()),
+            max = parseFloat(input.attr('max')),
+            min = parseFloat(input.attr('min'));
+
+        if(value < min){
+            value = min;
+            value = Math.round(value * 100) / 100;
+            value = (String(value).length == 1) ? value + '.00' : value;
+            value = (String(value).length == 3) ? value + '0' : value;
+            input.val(value);
+        }else{
+            if(value > max){
+                value = max;
+                value = Math.round(value * 100) / 100;
+                value = (String(value).length == 1) ? value + '.00' : value;
+                value = (String(value).length == 3) ? value + '0' : value;
+                input.val(value);
+            }
+        }
+
+
         if(event.keyCode == 13){
             $(this).blur();
         }
     });
     $(".curve-shape__field").blur(function(event) {
         event.preventDefault();
+        if(this.value.trim() == "")
+            this.value = "0";
         let input = $(this),
             value = parseFloat(input.val()),
             max = parseFloat(input.attr('max')),
@@ -106,6 +130,10 @@ jQuery(document).ready(function($) {
 
         if(this.value != "")
             Curve.setBase(this.value);
+
+        if(event.keyCode == 13){
+            $(this).blur();
+        }
     });
 
     $("body").on('blur', '.curve-bonus__value--base', function(event) {

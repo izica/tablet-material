@@ -7,6 +7,9 @@ jQuery(document).ready(function($) {
 
     $("body").on('keyup', '.table-row--empty .table-field input', function(event) {
         event.preventDefault();
+        if(event.keyCode == 13)
+            return;
+
         $(this).parents('.table-row--empty').removeClass('table-row--empty');
         Dictionary.addRowEmpty();
     });
