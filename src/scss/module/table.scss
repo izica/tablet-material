@@ -2,6 +2,7 @@
     position: relative;
     height: 100%;
     display: none;
+    // padding-left: 30px;
 
     &--main{
         display: block;
@@ -26,7 +27,13 @@
         width: 100%;
         background: #fafafa;
         box-shadow: 0 1px 6px -1px rgba(0,0,0,.36);
-
+        &-checkbox{
+            span{
+                &::after{
+                    display: none;
+                }
+            }
+        }
         td {
             vertical-align: top;
             padding: 17px 0;
@@ -97,6 +104,31 @@
 
     &-slider {
         padding-top: 22px !important;
+    }
+
+    &-checkbox{
+        height: 52px;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        i{
+            margin-top: 4px;
+        }
+
+        .mdi-checkbox-marked{
+            display: none;
+            color: #00bbd3;
+        }
+
+        &--active{
+            .mdi-checkbox-blank-outline{
+                display: none;
+            }
+            .mdi-checkbox-marked{
+                display: block;
+            }
+        }
     }
 
     &-field {

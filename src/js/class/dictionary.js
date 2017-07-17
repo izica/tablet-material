@@ -156,8 +156,10 @@ const Dictionary = {
         this.table.find('col').remove();
         this.table.find('tr').remove();
         this.table.find('td').remove();
+        this.table.find('colgroup').append('<col width="40"></col>');
+        this.table.find('.table-head tbody').append('<td class="table-head-checkbox"><span></span></td>');
         for (var i = 0; i < columns.length; i++) {
-            this.table.find('colgroup').append('<col width=1/' + columns.length + '></col>');
+            this.table.find('colgroup').append('<col width="100%/' + columns.length + '"></col>');
             this.table.find('.table-head tbody').append('<td><span>' + columns[i].name + '</span></td>');
         }
         return this;
@@ -199,10 +201,20 @@ const Dictionary = {
                     </div>
                 </td>`;
     },
+    addCheckbox(){
+        return `<td>
+                    <div class="table-checkbox">
+                        <i class="mdi mdi-checkbox-marked"></i>
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                    </div>
+                </td>`;
+    },
     addRow(data){
         let columns_dictionary = DictionaryDescription[this.dictionary].columns;
 
         var row = $("<tr></tr>");
+        row.append(this.addCheckbox());
+
         for (var i = 0; i < this.columns.length; i++) {
             if(this.columns[i].type == 'field'){
                 row.append(this.addField(data[i], columns_dictionary[i].name, columns_dictionary[i].number));
