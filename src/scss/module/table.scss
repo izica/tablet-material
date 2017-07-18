@@ -7,7 +7,7 @@
     &--main{
         display: block;
         .table-body td{
-            padding: 19px 15px!important;
+            padding: 19px 15px;
         }
     }
 
@@ -103,7 +103,7 @@
     }
 
     &-slider {
-        padding-top: 22px !important;
+        padding-top: 27px !important;
     }
     &-row--empty &-checkbox{
         display: none;
