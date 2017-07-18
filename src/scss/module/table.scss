@@ -105,7 +105,9 @@
     &-slider {
         padding-top: 22px !important;
     }
-
+    &-row--empty &-checkbox{
+        display: none;
+    }
     &-checkbox{
         height: 52px;
         display: flex;

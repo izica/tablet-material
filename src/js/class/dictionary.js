@@ -228,6 +228,7 @@ const Dictionary = {
         let columns = DictionaryDescription[this.dictionary].columns;
 
         var row = $("<tr></tr>").addClass('table-row--empty');
+        row.append(this.addCheckbox());
         for (var i = 0; i < columns.length; i++) {
             if(columns[i].type == 'field'){
                 row.append(this.addField('', columns[i].name));
