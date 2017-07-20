@@ -2,7 +2,7 @@ var Profile = {
     getFakeData(){
         return {
             name: 'Петров Константин Константинович',
-            position: 'Администратор',
+            position: 'Администратор Адм инист ратор Админ истра тор',
             bonus: '31 234 ₽',
             bonus_calc: '12 313 ₽',
             ratio: '46 %',
@@ -25,7 +25,7 @@ var Profile = {
         $('.profile-select-item').remove();
         var row = {
             name: 'Шахова Марина Павловна',
-            position: 'Менеджер',
+            position: 'Менеджер asd ad adadsad sad adsadas ',
         }
         var data = [];
         for (var i = 0; i < 10; i++) {

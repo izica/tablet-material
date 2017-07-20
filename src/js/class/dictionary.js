@@ -231,7 +231,7 @@ const Dictionary = {
         row.append(this.addCheckbox());
         for (var i = 0; i < columns.length; i++) {
             if(columns[i].type == 'field'){
-                row.append(this.addField('', columns[i].name));
+                row.append(this.addField('', columns[i].name, columns[i].number));
             }else{
                 row.append(this.addSelect(false, columns[i].name, this.columns[i].values));
             }
